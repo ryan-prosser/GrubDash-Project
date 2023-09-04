@@ -73,8 +73,7 @@ function correctId(req, res, next) {
 function update(req, res, next) {
   const foundDish = res.locals.dish
   const {dishId} = req.params
-  const {data: {id, name, description, price, image_url} = {} } = req.body
-  foundDish.id = id
+  const {data: {name, description, price, image_url} = {} } = req.body
   foundDish.name = name
   foundDish.description = description
   foundDish.price = price
